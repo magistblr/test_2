@@ -43,7 +43,7 @@ function render() {
         wind = document.querySelector('.wind-value');
         cityName = city.innerHTML;
 
-  fetch (`http://api.openweathermap.org/data/2.5/forecast?q=${cityName}&lang=ru&appid=67f9f5ed3187e21b6b8e4124dd00c9bd`)
+  fetch (`https://api.openweathermap.org/data/2.5/forecast?q=${cityName}&lang=ru&appid=67f9f5ed3187e21b6b8e4124dd00c9bd`)
     .then(function  (resp) { return resp.json() })
     .then(function (data) {
 
