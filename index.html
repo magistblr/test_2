@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+  <title>Weather</title>
+</head>
+<body>
+  <div class="weather">
+    <div class="weather__inner">
+      <header class="header">
+        <div class="header__search-panel">
+          <div class="search">
+            <input class="search__input" type="text" placeholder="Введите город" title="Разрешено использовать только русские буквы" pattern="[А-Яа-яЁё]">
+            <span class="search__input-text">ОК</span>
+          </div>
+          <span class="city">Выберите город</span>
+          <div class="change-city">
+            <div class="change-city__change">Сменить город</div>
+            <svg width="15" height="20">
+              <img src="./img/Path 2.svg" alt="logo-location">
+            </svg>
+            <div class="change-city__geo">Мое местоположение</div>
+          </div>
+        </div>
+        <div class="header__toggle">
+          <div class="header__toggle-btn-wrapper">
+            <div class="switch">
+              <span class="deg">°</span>
+              <span class="term__C">C</span>
+              <span class="term__F">F</span>
+              <input id="click" type="checkbox">
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <section class="forecast">
+        <div class="forecast-term">
+          <img id="forecast1" class="forecast-term__logo" src="/img/sun.svg" alt="sun">
+          <img id="forecast2" class="forecast-term__logo" src="/img/rain.svg" alt="rain">
+          <img id="forecast3" class="forecast-term__logo" src="/img/cloud.svg" alt="cloud">
+          <img id="forecast4" class="forecast-term__logo" src="/img/strom.svg" alt="storm">
+          <img id="forecast5" class="forecast-term__logo" src="/img/partly cloudy.svg" alt="partly-cloudy">
+          <span class="forecast-term__current"></span>
+        </div>
+        <div class="forecast-term__briefly-condition">------------</div>
+      </section>
+
+      <footer class="details">
+        <div class="details__row">
+          <div  class="details__item-wind">
+            <span class="item-wind">Ветер</span>
+            <div class="wind-value descr">--------</div>
+          </div>
+
+          <div class="details__item-pressure">
+            <span class="item-pressure">Давление</span>
+            <div class="pressure-value descr">--------</div>
+          </div>
+
+          <div class="details__item-humidity">
+            <span class="item-humidity">Влажность</span>
+            <div class="humidity-value descr">--------</div>
+          </div>
+
+          <div class="details__item-rain">
+            <span class="item-rain">Вероятность дождя</span>
+            <div class="rain-value descr">--------</div>
+          </div>
+
+        </div>
+      </footer>
+
+    </div>
+  </div>
+  <script src="./app.js"></script>
+</body>
+</html>
