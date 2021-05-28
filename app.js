@@ -53,8 +53,8 @@ function render() {
         temp.innerHTML = Math.round(data.list[0].main.temp - 273) + '&deg';
         descr.innerHTML = data.list[0].weather[0].description[0].toUpperCase() + data.list[0].weather[0].description.slice(1);
         pressure.innerHTML = Math.round(data.list[0].main.pressure / 1.33322) + ' мм рт. ст.';
-        humidity.innerHTML = data.list[0].main.humidity + ' %';
-        rain.innerHTML = (data.list[0].pop * 100) + ' %';
+        humidity.innerHTML = Math.round(data.list[0].main.humidity) + ' %';
+        rain.innerHTML = Math.round(data.list[0].pop * 100) + ' %';
         wind.innerHTML = Math.round(data.list[0].wind.speed) + ' м/с, ' + text(data.list[0].wind.speed);
 
         logo = [document.getElementById('forecast1'), document.getElementById('forecast2'), document.getElementById('forecast3'), document.getElementById('forecast4'), document.getElementById('forecast5')];
@@ -125,17 +125,6 @@ function render() {
     return `${directions[w]}`;
   }
 }
-
-
-
-
-
-
-
-
-
-
-
 
 
 
